@@ -84,10 +84,9 @@ body{
     top:0;
     z-index: 5;
     width:100%;
-    height: 3em;
+    height: 100%;
     padding: 0;
     align-items: center;
-    border-bottom: 1px solid gray;
 }
 
 .nav{
@@ -141,17 +140,22 @@ main{
 
 .grid{
     display:grid;
-    grid-template: repeat(8, 100px) / repeat(8, 1fr);
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
     width: 100%;
+    height: 100%;
     margin: 0;
     padding:0;
+    background-size: 100%;
+    padding-top: 54px;
+}
+
+.section{
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 10px;
 }
 
 /* Home */
-
-.home{
-    padding-top: 1em;
-}
 .homeBox {
     height: 100%;
     width: 100%;
@@ -160,23 +164,30 @@ main{
 .homeBox.message{
     grid-area: 4 / 4 / span 2 / span 2;
     z-index: 2;
-    padding-left: 1em;
+    padding: 1em;
     background-color: #1b242f;
     opacity: 0.8;
     color: #fff;
     border-radius: 1em;
 }
 
-.homeBox.message a{
+.message p{
+}
+
+.message.button{
+    text-align: right;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.homeBox.message p a{
     border: 1px solid lightgray;
-    margin-left: 1em;
+    width: 100%;
+    margin-left: auto;
+    padding: 5px;
 }
 
 /* About */
-.about{
-    padding-top: 1em;
-}
-
 .aboutBox {
     height: 100%;
     width: 100%;
@@ -199,7 +210,8 @@ main{
     border-radius: 0.5em;
     display: grid;
     grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-    grid-gap: 1em 1em;
+    grid-gap: 0.5em 0.5em;
+    align-items: stretch;
 }
 
 .aboutGrid p{
@@ -207,13 +219,16 @@ main{
     text-align: center;
 }
 
-.aboutGrid img{
-    width: 100%;
-    height: 100%;
-}
-
 .timesSquare{
     grid-area: 1 / 1 / -1 / span 5;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+}
+
+.santaClarita{
+    height: 100%;
+    max-width: 100%;
 }
 
 .aboutNames{
@@ -231,19 +246,20 @@ main{
     padding-left: 1em;
 }
 
-.aboutGrid a{
-    grid-area: 6 / 7 / span 4 / -2;
+.aboutAdress{
+    grid-area: 5 / 6 / span 2/ -1;
 }
 
-.aboutAdress{
-    grid-area: 5 / 6 / span 1/ -1;
+.aboutGrid a{
+    grid-area: 7 / 6 / span 3 / -1;
+    justify-self: center;
+    align-self: top;
+    height: 100%;
+    max-width: 100%;
 }
 
 
 /* Zoom */
-.zoom{
-    padding-top: 1em;
-}
 
 .zoomBox {
     height: 100%;
