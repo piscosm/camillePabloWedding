@@ -164,26 +164,28 @@ main{
 .homeBox.message{
     grid-area: 4 / 4 / span 2 / span 2;
     z-index: 2;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
     background-color: #1b242f;
     opacity: 0.8;
     color: #fff;
     border-radius: 1em;
 }
 
-.message p{
+.message.title{
+    padding: 0;
+    margin: 0;
 }
 
-.message.button{
-    text-align: right;
-    margin-top: 40px;
-    margin-right: 40px;
+.message.text{
+    justify-self:center;
 }
 
-.homeBox.message p a{
+
+.homeBox.message a{
     border: 1px solid lightgray;
-    width: 100%;
-    margin-left: auto;
     padding: 5px;
 }
 
@@ -200,7 +202,7 @@ main{
     grid-area: 1 / 1 / -1 / -1;
 }
 
-.aboutGrid{
+.aboutFlex{
     grid-area: 3 / 3 / -3 / -3;
     z-index: 3;
     padding: 1em;
@@ -208,54 +210,48 @@ main{
     opacity: 0.8;
     color: #fff;
     border-radius: 0.5em;
-    display: grid;
-    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-    grid-gap: 0.5em 0.5em;
-    align-items: stretch;
-}
-
-.aboutGrid p{
-    margin:0;
-    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 
 .timesSquare{
-    grid-area: 1 / 1 / -1 / span 5;
-    max-width: 100%;
+    max-width: 50%;
     max-height: 100%;
     align-self: center;
 }
 
-.santaClarita{
-    height: 100%;
-    max-width: 100%;
+.aboutFlexInner{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-items: center;
+}
+
+.aboutFlexInner a{
+}
+
+.aboutFlexInner a img{
+    max-height: 40%;
+    max-width: 40%;
+    display:block;
+    margin:auto;
 }
 
 .aboutNames{
-    grid-area: 2 / 6 / span 1 / -1;
     font-size: 1.5em;
 }
 
 .aboutDate{
-    grid-area: 3 / 6 / span 1 / -1;
     padding-top: 0.5em;
 }
 
 .aboutTime{
-    grid-area: 4 / 6 / span 1 / -1;
     padding-left: 1em;
 }
 
 .aboutAdress{
-    grid-area: 5 / 6 / span 2/ -1;
-}
-
-.aboutGrid a{
-    grid-area: 7 / 6 / span 3 / -1;
-    justify-self: center;
-    align-self: top;
-    height: 100%;
-    max-width: 100%;
 }
 
 
@@ -273,7 +269,7 @@ main{
     grid-area: 1 / 1 / -1 / -1;
 }
 
-.zoomGrid{
+.zoomFlex{
     grid-area: 3 / 3 / -5 / -3;
     z-index: 3;
     padding: 1em;
@@ -281,35 +277,31 @@ main{
     opacity: 0.8;
     color: #fff;
     border-radius: 0.5em;
-    display: grid;
-    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
-    grid-gap: 1em 1em;
+    display: flex;
     height: 100%;
     width: 100%;
 }
 
-.zoomGrid p{
+.zoomBox img{
+    width: 25%;
+    max-height: 100%;
+    align-self: center;
+}
+
+.zoomFlex p{
     margin:0;
     text-align: center;
+    padding: 0.4em;
 }
 
 
 .zoomTitle{
-    grid-area: 1 / 3 / 2 / -1;
-    font-size: 2em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 .zoomClick{
-    grid-area: 2 / 3 / span 3 / -1;
-    align-self: center;
-    font-size: 1.5em;
-}
-
-.zoomBox img{
-    grid-area: 2 / 1 / span 2 / span 2;
-    width: 100%;
-    align-self: center;
+    font-size: 1em;
 }
 
 .zoomClick span{
@@ -317,7 +309,102 @@ main{
 }
 
 .zoomPassword{
-    grid-area: 5 / 6 / span 1 / span 2;
-    align-self:flex-end;
-    justify-self: self-end;
 }
+
+.zoomFlexInner{
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width:744px){
+    .passport2Box{
+        grid-area: 1 / 1 / -1 / -1;
+    }
+
+    .passport1Box{
+        display: none;
+    }
+
+    .homeBox.message{
+        padding: 0.6em;
+    }
+    .homeBox.message{
+        grid-area: 3 / 3 / span 2 / span 4;
+    }
+    .message.button{
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .aboutFlex{
+        grid-area: 2 / 2 / -3 / -3;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .timesSquare{
+        max-width: 100%;
+        max-height: 40%;
+    }
+
+    .aboutFlexInner{
+        height: 100%;
+        max-height: 60%;
+        max-width: 100%;
+        justify-content: space-around;
+    }
+
+    .aboutNames{
+        margin:0;
+        padding:0;
+    }
+    
+    .aboutDate{
+        margin:0;
+        padding:0;
+    }
+
+    .aboutTime{
+        margin:0;
+        padding:0;
+    }
+
+    .aboutAdress{
+            margin:0;
+            padding:0;
+    }
+
+    .aboutFlexInner a{
+        
+    }
+
+    .aboutFlexInner a img{
+        display: none;
+    }
+
+
+
+    
+
+    .zoomFlex{
+        grid-area: 3 / 2 / -4 / -3;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .zoomBox img{
+        width: auto;
+        max-height: 30%;
+        align-self: center;
+    }
+
+
+    
+    
+}
+

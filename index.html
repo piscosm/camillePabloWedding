@@ -4,6 +4,7 @@
 <!-- Head --> 
 <head>
   <title>Website Design System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="./style.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap" rel="stylesheet">
@@ -34,7 +35,7 @@
           <div class="homeBox message">
             <h2 class="message title">Hello</h2>
             <p class="message text">Welcome to the wedding site</p>
-            <p class="message button"><a href="#about">More Info</a></p>
+            <a class="message button" href="https://www.w3schools.com">More Info</a>
           </div>
         </div>
       </section>
@@ -46,13 +47,15 @@
       <img class="aboutBox passport1Box" src="./images/passport1.jpg">
       <img class="aboutBox passport2Box" src="./images/passport2.jpg">
       <div class="aboutBox background"></div>
-      <div class="aboutBox aboutGrid">
+      <div class="aboutBox aboutFlex">
         <img class="timesSquare" src="./images/IMG_0346.jpeg">
-        <p class="aboutNames">Camille & Pablo</p>
-        <p class="aboutDate">January 8 2021<br>
-        <p class="aboutTime">11.00 Los Angeles<br>20.00 Barcelona</p>
-        <a target="_blank" href="https://www.google.com/maps/dir//26936+Cherry+Willow+Dr,+Canyon+Country,+CA+91387-1809,+Estats+Units+d'Amèrica/@33.992648,-118.4680943,9z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c2892111683367:0x97489cb20f086e38!2m2!1d-118.4357283!2d34.4047512!3e0"><img class="santaClarita" src="./images/santaClarita.jpg"></a>
-        <p class="aboutAdress">26936 Cherry Willow Dr<br>Canyon Country, CA 91387</p>
+          <div class="aboutFlexInner">
+          <p class="aboutNames">Camille & Pablo</p>
+          <p class="aboutDate">January 8 20ß21<br>
+          <p class="aboutTime">11.00 Los Angeles<br>20.00 Barcelona</p>
+            <a target="_blank" href="https://www.google.com/maps/dir//26936+Cherry+Willow+Dr,+Canyon+Country,+CA+91387-1809,+Estats+Units+d'Amèrica/@33.992648,-118.4680943,9z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c2892111683367:0x97489cb20f086e38!2m2!1d-118.4357283!2d34.4047512!3e0"><img class="santaClarita" src="./images/santaClarita.jpg"></a>
+          <p class="aboutAdress">26936 Cherry Willow Dr<br>Canyon Country, CA 91387</p>
+      </div>
     </div>
   </section>
 
@@ -62,16 +65,14 @@
       <img class="zoomBox passport1Box" src="./images/passport1.jpg">
       <img class="zoomBox passport2Box" src="./images/passport2.jpg">
       <div class="zoomBox background"></div>
-      <div class="zoomBox zoomGrid">
-        <p class="zoomTitle">Live wedding!</p>
+      <div class="zoomBox zoomFlex">
         <img class="zoomLogo" src="./images/zoom.png">
-        <p class="zoomClick">Click <span>Zoom</span> to watch the wedding live<br><a target="_blank" href="https://us05web.zoom.us/j/82017165104?pwd=cVFhL0p2a0lXSW5vQW9zRXhiYnQ0UT09"><button>Zoom!</button></a></p>
-        <p class="zoomPassword">password: 1234</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <div class="zoomFlexInner">
+          <p class="zoomTitle">Live wedding!</p>
+          <p class="zoomClick">Click <span>Zoom</span> to watch the wedding live<br></p>
+          <a target="_blank" href="https://us05web.zoom.us/j/82017165104?pwd=cVFhL0p2a0lXSW5vQW9zRXhiYnQ0UT09"><button>Zoom!</button></a>
+          <p class="zoomPassword">password: 1234</p>
+        </div>
       </div>
     </div>
 
