@@ -70,7 +70,6 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
-
 body{
     font-size: 16px;
     font-family: "Raleway";
@@ -123,7 +122,6 @@ a {
 }
 
 
-
 /* Main */
 main{
     padding: 0;
@@ -163,7 +161,7 @@ main{
 
 .homeBox.message{
     grid-area: 4 / 4 / span 2 / span 2;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -187,12 +185,14 @@ main{
 .homeBox.message a{
     border: 1px solid lightgray;
     padding: 5px;
+    z-index: 5;
 }
 
 /* About */
 .aboutBox {
     height: 100%;
     width: 100%;
+    z-index: 2;
 }
 
 .aboutBox.background{
@@ -204,7 +204,7 @@ main{
 
 .aboutFlex{
     grid-area: 3 / 3 / -3 / -3;
-    z-index: 3;
+    z-index: 5;
     padding: 1em;
     background-color: darkkhaki ;
     opacity: 0.8;
@@ -229,9 +229,6 @@ main{
     justify-items: center;
 }
 
-.aboutFlexInner a{
-}
-
 .aboutFlexInner a img{
     max-height: 40%;
     max-width: 40%;
@@ -251,9 +248,6 @@ main{
     padding-left: 1em;
 }
 
-.aboutAdress{
-}
-
 
 /* Zoom */
 
@@ -271,7 +265,7 @@ main{
 
 .zoomFlex{
     grid-area: 3 / 3 / -5 / -3;
-    z-index: 3;
+    z-index: 5;
     padding: 1em;
     background-color: #1b242f;
     opacity: 0.8;
@@ -306,9 +300,6 @@ main{
 
 .zoomClick span{
     font-weight: 1000;
-}
-
-.zoomPassword{
 }
 
 .zoomFlexInner{
@@ -377,18 +368,10 @@ main{
             margin:0;
             padding:0;
     }
-
-    .aboutFlexInner a{
-        
-    }
-
+    
     .aboutFlexInner a img{
         display: none;
     }
-
-
-
-    
 
     .zoomFlex{
         grid-area: 3 / 2 / -4 / -3;
